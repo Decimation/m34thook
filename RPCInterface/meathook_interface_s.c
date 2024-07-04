@@ -1,23 +1,20 @@
 
-
 /* this ALWAYS GENERATED file contains the RPC server stubs */
-
 
  /* File created by MIDL compiler version 8.01.0622 */
 /* at Mon Jan 18 19:14:07 2038
  */
 /* Compiler settings for meathook_interface.idl:
-    Oicf, W1, Zp8, env=Win64 (32b run), target_arch=AMD64 8.01.0622 
-    protocol : dce , ms_ext, c_ext, robust
-    error checks: allocation ref bounds_check enum stub_data 
-    VC __declspec() decoration level: 
-         __declspec(uuid()), __declspec(selectany), __declspec(novtable)
-         DECLSPEC_UUID(), MIDL_INTERFACE()
+	Oicf, W1, Zp8, env=Win64 (32b run), target_arch=AMD64 8.01.0622 
+	protocol : dce , ms_ext, c_ext, robust
+	error checks: allocation ref bounds_check enum stub_data 
+	VC __declspec() decoration level: 
+		 __declspec(uuid()), __declspec(selectany), __declspec(novtable)
+		 DECLSPEC_UUID(), MIDL_INTERFACE()
 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 #if defined(_M_AMD64)
-
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 #if _MSC_VER >= 1200
@@ -41,23 +38,22 @@
 #define WIRE_MARSHAL_TABLE_SIZE   0            
 
 typedef struct _meathook_interface_MIDL_TYPE_FORMAT_STRING
-    {
-    short          Pad;
-    unsigned char  Format[ TYPE_FORMAT_STRING_SIZE ];
-    } meathook_interface_MIDL_TYPE_FORMAT_STRING;
+	{
+	short          Pad;
+	unsigned char  Format[ TYPE_FORMAT_STRING_SIZE ];
+	} meathook_interface_MIDL_TYPE_FORMAT_STRING;
 
 typedef struct _meathook_interface_MIDL_PROC_FORMAT_STRING
-    {
-    short          Pad;
-    unsigned char  Format[ PROC_FORMAT_STRING_SIZE ];
-    } meathook_interface_MIDL_PROC_FORMAT_STRING;
+	{
+	short          Pad;
+	unsigned char  Format[ PROC_FORMAT_STRING_SIZE ];
+	} meathook_interface_MIDL_PROC_FORMAT_STRING;
 
 typedef struct _meathook_interface_MIDL_EXPR_FORMAT_STRING
-    {
-    long          Pad;
-    unsigned char  Format[ EXPR_FORMAT_STRING_SIZE ];
-    } meathook_interface_MIDL_EXPR_FORMAT_STRING;
-
+	{
+	long          Pad;
+	unsigned char  Format[ EXPR_FORMAT_STRING_SIZE ];
+	} meathook_interface_MIDL_EXPR_FORMAT_STRING;
 
 static const RPC_SYNTAX_IDENTIFIER  _RpcTransferSyntax = 
 {{0x8A885D04,0x1CEB,0x11C9,{0x9F,0xE8,0x08,0x00,0x2B,0x10,0x48,0x60}},{2,0}};
@@ -69,27 +65,25 @@ extern const meathook_interface_MIDL_EXPR_FORMAT_STRING meathook_interface__MIDL
 /* Standard interface: meathook_interface, ver. 1.0,
    GUID={0x1c9ca7c8,0xd421,0x482d,{0xb8,0x5d,0x79,0xfa,0xc3,0x3b,0x26,0x58}} */
 
-
 extern const MIDL_SERVER_INFO meathook_interface_ServerInfo;
 
 extern const RPC_DISPATCH_TABLE meathook_interface_v1_0_DispatchTable;
 
 static const RPC_SERVER_INTERFACE meathook_interface___RpcServerInterface =
-    {
-    sizeof(RPC_SERVER_INTERFACE),
-    {{0x1c9ca7c8,0xd421,0x482d,{0xb8,0x5d,0x79,0xfa,0xc3,0x3b,0x26,0x58}},{1,0}},
-    {{0x8A885D04,0x1CEB,0x11C9,{0x9F,0xE8,0x08,0x00,0x2B,0x10,0x48,0x60}},{2,0}},
-    (RPC_DISPATCH_TABLE*)&meathook_interface_v1_0_DispatchTable,
-    0,
-    0,
-    0,
-    &meathook_interface_ServerInfo,
-    0x04000000
-    };
+	{
+	sizeof(RPC_SERVER_INTERFACE),
+	{{0x1c9ca7c8,0xd421,0x482d,{0xb8,0x5d,0x79,0xfa,0xc3,0x3b,0x26,0x58}},{1,0}},
+	{{0x8A885D04,0x1CEB,0x11C9,{0x9F,0xE8,0x08,0x00,0x2B,0x10,0x48,0x60}},{2,0}},
+	(RPC_DISPATCH_TABLE*)&meathook_interface_v1_0_DispatchTable,
+	0,
+	0,
+	0,
+	&meathook_interface_ServerInfo,
+	0x04000000
+	};
 RPC_IF_HANDLE meathook_interface_v1_0_s_ifspec = (RPC_IF_HANDLE)& meathook_interface___RpcServerInterface;
 
 extern const MIDL_STUB_DESC meathook_interface_StubDesc;
-
 
 #if !defined(__RPC_WIN64__)
 #error  Invalid build platform for this stub.
@@ -102,11 +96,10 @@ extern const MIDL_STUB_DESC meathook_interface_StubDesc;
 #error This app will fail with the RPC_X_WRONG_STUB_VERSION error.
 #endif
 
-
 static const meathook_interface_MIDL_PROC_FORMAT_STRING meathook_interface__MIDL_ProcFormatString =
-    {
-        0,
-        {
+	{
+		0,
+		{
 
 	/* Procedure ExecuteConsoleCommand */
 
@@ -382,13 +375,13 @@ static const meathook_interface_MIDL_PROC_FORMAT_STRING meathook_interface__MIDL
 			0x0,		/* 0 */
 
 			0x0
-        }
-    };
+		}
+	};
 
 static const meathook_interface_MIDL_TYPE_FORMAT_STRING meathook_interface__MIDL_TypeFormatString =
-    {
-        0,
-        {
+	{
+		0,
+		{
 			NdrFcShort( 0x0 ),	/* 0 */
 /*  2 */	
 			0x11, 0x8,	/* FC_RP [simple_pointer] */
@@ -427,90 +420,88 @@ static const meathook_interface_MIDL_TYPE_FORMAT_STRING meathook_interface__MIDL
 			0x5b,		/* FC_END */
 
 			0x0
-        }
-    };
+		}
+	};
 
 static const unsigned short meathook_interface_FormatStringOffsetTable[] =
-    {
-    0,
-    36,
-    84,
-    132,
-    174,
-    216,
-    258,
-    300
-    };
-
+	{
+	0,
+	36,
+	84,
+	132,
+	174,
+	216,
+	258,
+	300
+	};
 
 static const MIDL_STUB_DESC meathook_interface_StubDesc = 
-    {
-    (void *)& meathook_interface___RpcServerInterface,
-    MIDL_user_allocate,
-    MIDL_user_free,
-    0,
-    0,
-    0,
-    0,
-    0,
-    meathook_interface__MIDL_TypeFormatString.Format,
-    1, /* -error bounds_check flag */
-    0x50002, /* Ndr library version */
-    0,
-    0x801026e, /* MIDL Version 8.1.622 */
-    0,
-    0,
-    0,  /* notify & notify_flag routine table */
-    0x1, /* MIDL flag */
-    0, /* cs routines */
-    0,   /* proxy/server info */
-    0
-    };
+	{
+	(void *)& meathook_interface___RpcServerInterface,
+	MIDL_user_allocate,
+	MIDL_user_free,
+	0,
+	0,
+	0,
+	0,
+	0,
+	meathook_interface__MIDL_TypeFormatString.Format,
+	1, /* -error bounds_check flag */
+	0x50002, /* Ndr library version */
+	0,
+	0x801026e, /* MIDL Version 8.1.622 */
+	0,
+	0,
+	0,  /* notify & notify_flag routine table */
+	0x1, /* MIDL flag */
+	0, /* cs routines */
+	0,   /* proxy/server info */
+	0
+	};
 
 static const RPC_DISPATCH_FUNCTION meathook_interface_table[] =
-    {
-    NdrServerCall2,
-    NdrServerCall2,
-    NdrServerCall2,
-    NdrServerCall2,
-    NdrServerCall2,
-    NdrServerCall2,
-    NdrServerCall2,
-    NdrServerCall2,
-    0
-    };
+	{
+	NdrServerCall2,
+	NdrServerCall2,
+	NdrServerCall2,
+	NdrServerCall2,
+	NdrServerCall2,
+	NdrServerCall2,
+	NdrServerCall2,
+	NdrServerCall2,
+	0
+	};
 static const RPC_DISPATCH_TABLE meathook_interface_v1_0_DispatchTable = 
-    {
-    8,
-    (RPC_DISPATCH_FUNCTION*)meathook_interface_table
-    };
+	{
+	8,
+	(RPC_DISPATCH_FUNCTION*)meathook_interface_table
+	};
 
 static const SERVER_ROUTINE meathook_interface_ServerRoutineTable[] = 
-    {
-    (SERVER_ROUTINE)ExecuteConsoleCommand,
-    (SERVER_ROUTINE)PushEntitiesFile,
-    (SERVER_ROUTINE)UploadData,
-    (SERVER_ROUTINE)GetEntitiesFile,
-    (SERVER_ROUTINE)GetActiveEncounter,
-    (SERVER_ROUTINE)GetCurrentCheckpoint,
-    (SERVER_ROUTINE)GetSpawnInfo,
-    (SERVER_ROUTINE)KeepAlive
-    };
+	{
+	(SERVER_ROUTINE)ExecuteConsoleCommand,
+	(SERVER_ROUTINE)PushEntitiesFile,
+	(SERVER_ROUTINE)UploadData,
+	(SERVER_ROUTINE)GetEntitiesFile,
+	(SERVER_ROUTINE)GetActiveEncounter,
+	(SERVER_ROUTINE)GetCurrentCheckpoint,
+	(SERVER_ROUTINE)GetSpawnInfo,
+	(SERVER_ROUTINE)KeepAlive
+	};
 
 static const MIDL_SERVER_INFO meathook_interface_ServerInfo = 
-    {
-    &meathook_interface_StubDesc,
-    meathook_interface_ServerRoutineTable,
-    meathook_interface__MIDL_ProcFormatString.Format,
-    meathook_interface_FormatStringOffsetTable,
-    0,
-    0,
-    0,
-    0};
+	{
+	&meathook_interface_StubDesc,
+	meathook_interface_ServerRoutineTable,
+	meathook_interface__MIDL_ProcFormatString.Format,
+	meathook_interface_FormatStringOffsetTable,
+	0,
+	0,
+	0,
+	0};
 #if _MSC_VER >= 1200
 #pragma warning(pop)
 #endif
-
 
 #endif /* defined(_M_AMD64)*/
 

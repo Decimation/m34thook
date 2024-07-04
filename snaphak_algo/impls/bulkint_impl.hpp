@@ -1,4 +1,5 @@
 #pragma once
+#include <bit>
 #ifndef SHALGO_DISABLE_INTBULK
 constexpr unsigned g_niter_per_element = IMPL_VECTOR_WIDTH / 4;
 constexpr unsigned g_niter_per_element16 = IMPL_VECTOR_WIDTH / 2;
@@ -6,7 +7,6 @@ constexpr unsigned g_niter_per_element16 = IMPL_VECTOR_WIDTH / 2;
 using ivec_local_t = unsigned __attribute__((ext_vector_type(g_niter_per_element)));
 using bytevec_local_t = unsigned char __attribute__((ext_vector_type(IMPL_VECTOR_WIDTH)));
 using ivec16_local_t = unsigned short __attribute__((ext_vector_type(IMPL_VECTOR_WIDTH / 2)));
-
 
 template<typename T>
 static uint64_t cs_movemask(T val) {
@@ -51,9 +51,6 @@ static uint64_t cs_movemask_i16_findindex(T val) {
 IMPL_CODE_SEG
 static unsigned find_first_equal16(unsigned short* values, unsigned nvalues, unsigned tofind) {
 
-
-
-
 	unsigned i = 0;
 
 #pragma clang loop vectorize(enable)
@@ -81,11 +78,7 @@ static unsigned find_first_equal16(unsigned short* values, unsigned nvalues, uns
 IMPL_CODE_SEG
 static unsigned find_first_equal32(unsigned* values, unsigned nvalues, unsigned tofind) {
 
-	
-
-
 	unsigned i = 0;
-
 
 	for (; (i + g_niter_per_element) < nvalues; i += g_niter_per_element) {
 		ivec_local_t tocmp = *reinterpret_cast<ivec_local_t*>(&values[i]);
@@ -109,9 +102,6 @@ static unsigned find_first_equal32(unsigned* values, unsigned nvalues, unsigned 
 }
 IMPL_CODE_SEG
 static unsigned find_first_notequal32(unsigned* values, unsigned nvalues, unsigned tofind) {
-
-	
-
 
 	unsigned i = 0;
 
@@ -213,7 +203,6 @@ unsigned find_indexof_u64(unsigned long long* hashes, unsigned long long findhas
 		u64x2_t current1 = hptr[0];
 		u64x2_t current2 = hptr[1];
 
-
 		msk1 = current1 == fhash;
 		msk2 = current2 == fhash;
 
@@ -234,7 +223,6 @@ unsigned find_indexof_u64(unsigned long long* hashes, unsigned long long findhas
 	sumfinal = sumfinal | __builtin_shufflevector(sumfinal, sumfinal, 2, 3, -1, -1);
 
 	sumfinal = sumfinal | __builtin_shufflevector(sumfinal, sumfinal, 1, -1, -1, -1);
-
 
 	return delta + sumfinal[0];
 }
@@ -260,7 +248,6 @@ unsigned find_indexof_u64(unsigned long long* hashes, unsigned long long findhas
 
 		u64x2_t current1 = hptr[0];
 		u64x2_t current2 = hptr[1];
-
 
 		msk1 = current1 == fhash;
 		msk2 = current2 == fhash;
@@ -307,7 +294,6 @@ unsigned find_indexof_u64(unsigned long long* hashes, unsigned long long findhas
 		u64x2_t current1 = hptr[0];
 		u64x2_t current2 = hptr[1];
 
-
 		msk1 = current1 == fhash;
 		msk2 = current2 == fhash;
 
@@ -329,7 +315,6 @@ unsigned find_indexof_u64(unsigned long long* hashes, unsigned long long findhas
 	sumfinal = sumfinal | __builtin_shufflevector(sumfinal, sumfinal, 2, 3, -1, -1, -1, -1, -1, -1);
 
 	sumfinal = sumfinal | __builtin_shufflevector(sumfinal, sumfinal, 1, -1, -1, -1, -1, -1, -1, -1);
-
 
 	return delta + sumfinal[0];
 }
